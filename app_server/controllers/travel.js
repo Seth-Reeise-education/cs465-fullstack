@@ -1,7 +1,8 @@
 // Get travel page 
 const travel = (req, res) => {
     // redner the travel page and add title
-    res.render('travel', {title: "Travlr Getaways"});
+    pageTitle = process.env.npm_package_description + ' - Travel';
+    res.render('travel', {title: pageTitle});
 };
 
 module.exports = {

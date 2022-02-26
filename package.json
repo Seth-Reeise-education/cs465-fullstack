@@ -1,6 +1,8 @@
 {
   "name": "travlr",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Travlr Getaways",
+  "author": "Seth Reeise",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -12,7 +14,6 @@
     "handlebars": "^4.7.7",
     "hbs": "^4.2.0",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "nodemon": "^2.0.15"
+    "morgan": "~1.9.1"
   }
 }
