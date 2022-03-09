@@ -6,7 +6,6 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
-
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -15,6 +14,15 @@
     "handlebars": "^4.7.7",
     "hbs": "^4.2.0",
     "http-errors": "~1.6.3",
+    "mongoose": "^6.2.4",
     "morgan": "~1.9.1"
+  },
+  "seedgoose": {
+    "modelBaseDirectory": "app_server/models",
+    "models": [
+      "*.js",
+      "!db.js"],
+    "data": "data",
+    "db": "mongodb://localhost:27017/travlr"
   }
 }
