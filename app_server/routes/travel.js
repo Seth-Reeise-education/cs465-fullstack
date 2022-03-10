@@ -4,6 +4,6 @@ const controller = require('../controllers/travel')
 
 /* GET travlr page. */
 // Actual route/URL is declared in app.js
-router.get('/', controller.travel);
+router.get('/', controller.travelList);
 
 module.exports = router;
