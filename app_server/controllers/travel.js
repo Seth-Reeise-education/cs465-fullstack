@@ -61,7 +61,7 @@ const renderTripDetails = (req, res, responseBody) => {
 
 
     console.info("render method entered")
-    console.info(responseBody)
+    // console.info(responseBody)
 
     if (!(responseBody instanceof Array)) {
         message = 'API lookup error';
@@ -93,6 +93,8 @@ const tripDetails = (req, res) => {
     };
 
     console.info('>> travelController.tripDetails calling ' + requestOptions.url);
+    // console.info(req);
+    // console.info(res);
 
     request(
         requestOptions,
