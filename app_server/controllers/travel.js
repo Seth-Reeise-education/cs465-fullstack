@@ -11,6 +11,7 @@ const apiOptions = {
     server: 'http://localhost:3000'
 }
 
+// render travel list
 const renderTravelList = (req, res, responseBody) => {
     let message = null;
     let pageTitle = process.env.npm_package_description + ' - Travel';
@@ -53,8 +54,61 @@ const travelList = (req, res) => {
     );
 };
 
+// render trip details
+const renderTripDetails = (req, res, responseBody) => {
+    let message = null;
+    let pageTitle = 'Trip Details';
+
+
+    console.info("render method entered")
+    console.info(responseBody)
+
+    if (!(responseBody instanceof Array)) {
+        message = 'API lookup error';
+        responseBody = [];
+    } else {
+        if (!responseBody.length) {
+            message = "No trips exist in our database!";
+        }
+    }
+    res.render('trip',
+    {
+        title: pageTitle,
+        details: responseBody,
+        message
+    });
+}
+
+// Get trip details
+const tripDetails = (req, res) => {
+    let code = req.params.code;
+    // let code = codeArray[codeArray.length - 1];
+
+    const path = '/api/trips/' + code
+
+    const requestOptions = {
+        url: `${apiOptions.server}${path}`,
+        method: 'GET',
+        json: {}
+    };
+
+    console.info('>> travelController.tripDetails calling ' + requestOptions.url);
+
+    request(
+        requestOptions,
+        (err, {statusCode}, body) => {
+            if (err) {
+                console.error(err);
+            }
+            renderTripDetails(req, res, body);
+        }
+    );
+};
+
 
 module.exports = {
     travelList,
-    renderTravelList
+    renderTravelList,
+    tripDetails,
+    renderTripDetails
 };

@@ -14,16 +14,14 @@
 				<div class="box">
 					<div>
 						<div class="body">
-							<h1>Travel</h1>
-							<ul id="sites">
-								{{#each trips}}
-								<li>
-									<a href="/trip/{{this.code}}"><img src="images/{{this.image}}" alt="Img"></a>
-									<h2><a href="/travel">{{this.name}}</a></h2>
-									{{{this.description}}}
-								</li>
-								{{/each}}
-							</ul>
+							<h1>Travel Details cool stuff</h1>
+							{{#each details}}
+							<li>
+							<a href="/trip/{{this.code}}"></a>
+							{{{this.name}}}
+							{{{this.description}}}
+							</li>
+							{{/each}}
 						</div>
 					</div>
 				</div>

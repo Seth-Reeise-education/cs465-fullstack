@@ -10,7 +10,12 @@ var indexRouter = require('./app_server/routes/index');
 var usersRouter = require('./app_server/routes/users');
 const travelRouter = require('./app_server/routes/travel');
 
+
+const tripRouter = require('./app_server/routes/tripdetails')
+
+
 const apiRouter = require('./app_api/routes/index');
+
 
 var app = express();
 
@@ -33,6 +38,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/travel', travelRouter);
 
+app.use('/trip', tripRouter);
 app.use('/api', apiRouter);
 
 // catch 404 and forward to error handler
