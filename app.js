@@ -60,4 +60,4 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-console.log(process.env.npm_package_description)
+// console.log(process.env.npm_package_description)
