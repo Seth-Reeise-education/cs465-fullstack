@@ -14,17 +14,13 @@
     "handlebars": "^4.7.7",
     "hbs": "^4.2.0",
     "http-errors": "~1.6.3",
-    "mongoose": "^6.2.4",
+    "mongoose": "~5.9.2",
     "morgan": "~1.9.1",
+    "nodemon": "^2.0.15",
     "request": "^2.88.2"
   },
-  "seedgoose": {
-    "modelBaseDirectory": "app_api/models",
-    "models": [
-      "*.js",
-      "!db.js"
-    ],
-    "data": "data",
-    "db": "mongodb://localhost:27017/travlr"
+  "devDependencies": {
+    "hbs": "^4.2.0",
+    "seedgoose": "^2.0.2"
   }
 }
