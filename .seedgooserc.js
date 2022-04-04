@@ -1,5 +1,5 @@
 module.exports = {
-    modelBaseDirectory: 'app_api/models', // model directory name
+    modelBaseDirectory: 'app_api/database/models', // model directory name
     // Include all .js files but not db.js 
     models: ['*.js', '!db.js'], // model matcher
     data: 'data', // data directory name
