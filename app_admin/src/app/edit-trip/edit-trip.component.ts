@@ -52,11 +52,12 @@ export class EditTripComponent implements OnInit {
   }
 
   onSubmit() { 
-    this.submitted = true; if (this.editForm.valid) { 
+    this.submitted = true; 
+    if (this.editForm.valid) { 
     this.tripService.updateTrip(this.editForm.value) 
       .then(data => { 
         console.log(data); 
-        this.router.navigate(['']); 
+        this.router.navigateByUrl('/list-trips'); 
         }); 
       } 
     }

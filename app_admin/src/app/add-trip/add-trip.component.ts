@@ -36,7 +36,7 @@ import { TripDataService } from '../services/trip-data.service';
           this.tripService.addTrip(this.addForm.value) 
           .then( data => { 
             console.log(data); 
-            this.router.navigate(['']); 
+            this.router.navigateByUrl('/list-trips');  
           }); 
         } 
       } // get the form short name to access the form fields 
