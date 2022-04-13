@@ -1,5 +1,4 @@
 import { Injectable, Inject } from '@angular/core';
-import { Http } from '@angular/http';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Router } from '@angular/router';
 
@@ -12,7 +11,6 @@ import { User } from '../models/user';
 export class TripDataService {
 
   constructor(
-    // public http: Http,
     private http: HttpClient,
     private router: Router,
     @Inject(BROWSER_STORAGE) private storage: Storage
